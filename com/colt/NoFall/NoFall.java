@@ -33,8 +33,7 @@ public class NoFall extends JavaPlugin implements Listener {
 	public void entityDamageEvent(EntityDamageEvent event) {
 		if (event.getEntityType() == EntityType.PLAYER) {
 			Player player = (Player) event.getEntity();
-			if (event.getCause() == DamageCause.FALL
-					&& player.hasPermission("nofall.use")) {
+			if (event.getCause() == DamageCause.FALL && player.hasPermission("nofall.use")) {
 				if (worlds.contains(player.getWorld().getName())) {
 					event.setCancelled(true);
 				}
