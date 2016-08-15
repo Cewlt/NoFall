@@ -13,9 +13,9 @@ import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class NoFall extends JavaPlugin implements Listener {
+	private	List<String> worlds = new ArrayList<>();
 
-	List<String> worlds = new ArrayList<String>();
-
+	@Override
 	public void onEnable() {
 		Bukkit.getPluginManager().registerEvents(this, this);
 		saveDefaultConfig();
